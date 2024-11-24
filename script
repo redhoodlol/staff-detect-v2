@@ -1,0 +1,17 @@
+local a=game:GetService"Players"
+
+local b=33986332
+
+local function handlePlayer(c)
+if c:IsInGroup(b)then
+c:Kick"VF Staff Joined"
+end
+end
+
+for c,d in ipairs(a:GetPlayers())do
+handlePlayer(d)
+end
+
+a.PlayerAdded:Connect(function(c)
+handlePlayer(c)
+end)
